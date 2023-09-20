@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+
+/* 
+font-family: 'Archivo Black', sans-serif;
+font-family: 'Roboto', sans-serif;
+
+color
+053B50
+176B87
+64CCC5
+EEEEEE
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+}
+
+h1 {
+    font-family: 'Archivo Black', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* ====================== NAVBAR ====================== */
+#navbar {
+    width: 100vw;
+    position: fixed;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #176B87;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+#navbar .logo {
+    width: 8%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+}
+
+nav ul li a {
+    position: relative;
+    display: inline-block;
+    transition: 0.3s;
+    color: #eee;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 4px;
+    background-color: #eee;
+    bottom: -3px;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+nav ul li a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+#masuk {
+    position: relative;
+    display: inline-block;
+    color: #eee;
+    margin-right: 1rem;
+    transition: 0.3s;
+}
+
+#masuk::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 4px;
+    background-color: #eee;
+    bottom: -3px;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+#masuk:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+#daftar {
+    position: relative;
+    outline: 1.4px solid #eee;
+    background-color: #eee;
+    background-size: 200% 100%;	
+    background-image: linear-gradient(to right, transparent 50%, rgba(23, 107, 135, 1) 50%);
+    transition: background-position .3s cubic-bezier(0.19, 1, 0.22, 1) .1s, color .5s ease 0s, background-color .5s ease;
+    padding: .2rem 1.3rem;
+    color: #176B87;
+    border-radius: 1rem;
+}
+
+#daftar:hover {
+    color:rgba(255, 255, 255, 1);
+    background-color:rgba(23, 107, 135, 1);
+    background-position: -100% 100%;
+}
+
+/* ==================== Hero Section ==================== */
+section#hero {
+    display: flex;
+    padding: 5rem 0 0 3rem;
+    align-items: center;
+}
+
+section#hero h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+section#hero h1 span:first-child {
+    color: #176B87;
+}
+
+section#hero h1 span:last-child {
+    color: #FF7426;
+}
+
+section#hero p {
+    font-size: 1.3rem;
+    margin-bottom: 5rem;
+    color: rgb(36, 36, 36);
+}
+
+section#hero #link {
+    outline: 1.4px solid #176B87;
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+    background-color: #176B87;
+    background-size: 200% 100%;	
+    background-image: linear-gradient(to right, transparent 50%, #fff 50%);
+    transition: background-position .3s cubic-bezier(0.19, 1, 0.22, 1) .1s, color .5s ease 0s, background-color .5s ease;
+    border-radius: 30px;
+    color: #ffffff;
+}
+
+section#hero #link:hover {
+    color: #176B87;
+    background-color:rgba(23, 107, 135, 1);
+    background-position: -100% 100%;
+}
+
+#hero-img {
+    width: 500px;
+}
+
+/* ====================== Kelas Terpopuler ===================== */
+section#kelas {
+    margin-bottom: 10rem;
+    padding-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+section#kelas h1 {
+    color: #053B50;
+    font-size: 2.5rem;
+}
+
+section#kelas .kelas-cards {
+    display: flex;
+    gap: 2rem;
+}
+
+section#kelas .kelas-cards .card {
+    /* width: 150px; */
+    padding: 10px 10px 2.5rem 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+section#kelas .kelas-cards .card-header {
+    border-bottom: 2px dashed #ACACAC;
+    margin-bottom: 1rem;
+}
+
+section#kelas .kelas-cards .card-header img {
+    margin-bottom: 1rem;
+    width: 350px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+section#kelas .kelas-cards .card-header .star-rating {
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+section#kelas .kelas-cards .card-header p {
+    width: 350px;
+    font-size: 1.25rem;
+}
+
+section#kelas .kelas-cards .card-header span {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #FF7426;
+}
+
+section#kelas .kelas-cards .card .durasi-kelas {
+    color: #ACACAC;
+}
+
+section#kelas .kelas-cards .card button {
+    background-color: #FF7426;
+    color: #fff;
+    padding: .5rem 2rem;
+    border-radius: 25px;
+    font-size: 25px;
+    position: absolute;
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%);
+    margin-bottom: -25px;
+    cursor: pointer;
+}
+
+/* ====================== Keunggulan Kami ====================== */
+section#keunggulan {
+    display: flex;
+    align-items: center;
+    background-color: #053B50;
+    padding: 3rem 5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+section#keunggulan h1 {
+    width: 40%;
+    flex-grow: 1;
+    color: #64CCC5;
+    font-size: 2.5rem;
+}
+
+section#keunggulan .keunggulan-content {
+    flex-grow: 1;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+section#keunggulan .keunggulan-content .card {
+    padding: 1.5rem 1rem;
+    background-color: #eee;
+    width: 295px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+section#keunggulan .keunggulan-content .card .icon {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #176B87;
+    color: #eee;
+    margin-bottom: 1.5rem;
+}
+
+section#keunggulan .keunggulan-content .card h2 {
+    color: #053B50;
+    margin-bottom: 1rem;
+}
+
+section#keunggulan .keunggulan-content .card p {
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+section#keunggulan svg {
+    position: absolute;
+}
+
+section#keunggulan svg.blob-1 {
+    height: 300px;
+    top: -150px;
+    left: 200px;
+}
+
+section#keunggulan svg.blob-2 {
+    width: 300px;
+    bottom: -100px;
+    left: -100px;
+}
+
+/* ====================== Testimonial ====================== */
+section#testimonial {
+    padding: 0 2rem;
+    margin: 10rem 0 15rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section#testimonial h1 {
+    font-size: 2.5rem;
+    color: #053B50;
+    margin-bottom: 5rem;
+}
+
+section#testimonial .testimonial-content {
+    display: flex;
+    gap: 10rem;
+}
+
+section#testimonial .testimonial-content .testi {
+    text-align: center;
+}
+
+section#testimonial .testimonial-content .testi .text {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background-color: #64CCC5;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+section#testimonial .testimonial-content p {
+    width: 350px;
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #053B50;
+}
+
+section#testimonial .testimonial-content span {
+    font-weight: 500;
+}
+
+/* ====================== PESAN ====================== */
+section#pesan {
+    padding: 0 5rem 10rem 5rem;
+}
+
+section#pesan h1 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: #053B50;
+}
+
+section#pesan > p {
+    color: #053B50;
+    font-size: 1.3rem;
+}
+
+section#pesan .form {
+    position: relative;
+    margin-top: 5rem;
+    padding: 3rem;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 10, 0.2);
+}
+
+section#pesan .form img {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5rem;
+    width: 40%;
+    position: absolute;
+}
+
+section#pesan .form h2 {
+    color: #053B50;
+    margin-bottom: 2rem;
+}
+
+section#pesan label {
+    display: block;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+section#pesan label#check {
+    display: inline;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #053B50;
+}
+
+section#pesan input:not(#status), section#pesan textarea {
+    width: 40%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #e8e8e8;
+    outline: none;
+    color: #053B50;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+section#pesan input:focus {
+    outline: none;
+}
+
+section#pesan textarea {
+    resize: none; /* menghilangkan dua garis aksen di pojok kanan bawah */
+}
+
+#status {
+    cursor: pointer;
+}
+
+section#pesan button {
+    outline: 1.4px solid #053B50;
+    margin: 1rem 0;
+    background-color: #053B50;
+    color: #fff;
+    padding: .5rem 1.5rem;
+    transition: .3s;
+}
+
+section#pesan button:hover {
+    background-color: #fff;
+    color: #053B50;
+}
+
+#warning {
+    font-weight: 700;
+    padding: 1rem 0;
+    color: #FF9966;
+}
+
+/* ====================== FOOTER ====================== */
+footer {
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #176B87;
+    color: #eee;
+}
+
+footer .logo {
+    width: 150px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+footer ul li a {
+    color: #eee;
+}
+
+footer .social {
+    display: flex;
+    gap: 20px;
+}
+
+footer .social i {
+    cursor: pointer;
+}
